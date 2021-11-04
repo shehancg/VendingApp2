@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/OneDrive/ASSIGNMENT/VendingMachine/VendingApp2/app/src/main/res/drawable/roundedbutton.xml" value="0.40546875" />
+        <entry key="..\:/OneDrive/ASSIGNMENT/VendingMachine/VendingApp2/app/src/main/res/layout/activity_admin.xml" value="0.25" />
+        <entry key="..\:/OneDrive/ASSIGNMENT/VendingMachine/VendingApp2/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/VendingApp2/app/src/main/res/drawable/backspace.xml" value="1.6607142857142858" />
         <entry key="..\:/VendingApp2/app/src/main/res/drawable/roundedbutton.xml" value="0.2703125" />
         <entry key="..\:/VendingApp2/app/src/main/res/layout/activity_main.xml" value="0.5" />

@@ -7,19 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     String pno;
     Boolean vflag,result;
-    private Button go;
+    private ImageButton go;
     private EditText txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         txt =(EditText) findViewById(R.id.editTextPhone);
-        go =(Button) findViewById(R.id.buttonenter);
+        go =(ImageButton) findViewById(R.id.btnen);
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
