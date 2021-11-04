@@ -18,6 +18,7 @@
         android:ems="10"
         android:hint="Please Enter Phone Number"
         android:inputType="phone"
+        android:textColor="#000000"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
