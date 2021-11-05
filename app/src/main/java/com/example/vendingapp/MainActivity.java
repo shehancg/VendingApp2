@@ -1,46 +1,84 @@
 package com.example.vendingapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity  {
+import androidx.appcompat.app.AppCompatActivity;
 
+public class MainActivity extends AppCompatActivity {
+
+    Button b1,b2,b3,b4,b5,b6,b7,b8,b9,b0;
+    ImageButton back;
     String pno;
     Boolean vflag,result;
-    private ImageButton go;
-    private EditText txt;
+    private TextView txt;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txt =(EditText) findViewById(R.id.editTextPhone);
-        go =(ImageButton) findViewById(R.id.btnen);
-        go.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                pno = txt.getText().toString();
-                vflag = validate();
+        txt = findViewById(R.id.textView3);
+        ImageButton go = findViewById(R.id.btnen);
+        go.setOnClickListener(v -> {
+            pno = txt.getText().toString();
+            vflag = validate();
 
-                if(vflag.equals(true)) {
+            if(vflag.equals(true)) {
 
-                    if(pno.equals("0000")){
+                if(pno.equals("0000")){
 
-                        openadmin();
+                    openadmin();
 
-                    }else {
+                }else {
 
-                        openuser();
+                    openuser();
 
-                    }
                 }
             }
         });
+
+        b1=findViewById(R.id.button1);
+        b2=findViewById(R.id.button2);
+        b3=findViewById(R.id.button3);
+        b4=findViewById(R.id.button4);
+        b5=findViewById(R.id.button5);
+        b6=findViewById(R.id.button6);
+        b7=findViewById(R.id.button7);
+        b8=findViewById(R.id.button8);
+        b9=findViewById(R.id.button9);
+        b0=findViewById(R.id.buttonzero);
+        back=findViewById(R.id.backspace);
+
+        b1.setOnClickListener(view -> txt.setText(txt.getText().toString()+"1"));
+
+        b2.setOnClickListener(view -> txt.setText(txt.getText().toString()+"2"));
+
+        b3.setOnClickListener(view -> txt.setText(txt.getText().toString()+"3"));
+
+        b4.setOnClickListener(view -> txt.setText(txt.getText().toString()+"4"));
+
+        b5.setOnClickListener(view -> txt.setText(txt.getText().toString()+"5"));
+
+        b6.setOnClickListener(view -> txt.setText(txt.getText().toString()+"6"));
+
+        b7.setOnClickListener(view -> txt.setText(txt.getText().toString()+"7"));
+
+        b8.setOnClickListener(view -> txt.setText(txt.getText().toString()+"8"));
+
+        b9.setOnClickListener(view -> txt.setText(txt.getText().toString()+"9"));
+
+        b0.setOnClickListener(view -> txt.setText(txt.getText().toString()+"0"));
+
+        back.setOnClickListener(view -> {
+            StringBuilder stringBuilder=new StringBuilder(txt.getText());
+            stringBuilder.deleteCharAt(txt.getText().length()-1);
+            String newstring=stringBuilder.toString();
+            txt.setText(newstring);
+        });
+
     }
     private boolean validate(){
 
@@ -66,5 +104,4 @@ public class MainActivity extends AppCompatActivity  {
         Intent intent = new Intent(this, Admin.class);
         startActivity(intent);
     }
-
 }

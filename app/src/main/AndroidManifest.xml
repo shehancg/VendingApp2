@@ -9,7 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VendingApp">
-        <activity android:name=".Admin"></activity>
+        <activity
+            android:name=".CustomerView3"
+            android:exported="false" />
+        <activity
+            android:name=".userview3"
+            android:exported="false" />
+        <activity
+            android:name=".CustomerView2"
+            android:exported="false" />
+        <activity android:name=".Admin" />
         <activity android:name=".CustomerView1" />
         <activity android:name=".MainActivity">
             <intent-filter>
