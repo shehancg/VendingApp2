@@ -1,6 +1,7 @@
 package com.example.vendingapp;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -16,12 +17,16 @@ public class MainActivity extends AppCompatActivity {
     String pno;
     Boolean vflag,result;
     private TextView txt;
+    public MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         txt = findViewById(R.id.textView3);
         ImageButton go = findViewById(R.id.btnen);
+        mp = MediaPlayer.create(MainActivity.this,R.raw.bgmusic);
+        mp.setLooping(true);
+        mp.start();
         go.setOnClickListener(v -> {
             pno = txt.getText().toString();
             vflag = validate();
@@ -33,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                     openadmin();
 
                 }else {
-
+                    mp.stop();
                     openuser();
 
                 }
@@ -101,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
     }
     private void openadmin(){
 
-        Intent intent = new Intent(this, Admin.class);
+        Intent intent = new Intent(this, admin1.class);
         startActivity(intent);
     }
 }

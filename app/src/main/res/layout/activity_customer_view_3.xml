@@ -5,6 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/userviewthree"
-    tools:context=".CustomerView3">
+    tools:context=".CustomerView_3">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
