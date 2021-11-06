@@ -66,7 +66,7 @@ public class CustomerView_2 extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1 && resultCode == RESULT_OK && data != null){
             ArrayList<String> arrayList=data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-            if(arrayList.get(0).toString().equals("Sprite new look same great taste")){
+            if(arrayList.get(0).toString().equals("Sprite new look")){
                 Intent intent= new Intent(CustomerView_2.this,CustomerView_3.class);
                 startActivity(intent);
             }
