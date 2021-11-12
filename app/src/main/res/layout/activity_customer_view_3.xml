@@ -4,7 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/userviewthree"
+    android:background="@drawable/newbackground"
     tools:context=".CustomerView_3">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="800dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="92dp"
+        android:text="Congratulations ! Enjoy your drink in a clear bottle, which is now more recyclable. Thank you!"
+        android:textColor="@color/red"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="717dp"
+        android:layout_height="288dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/mainimage" />
 </androidx.constraintlayout.widget.ConstraintLayout>
